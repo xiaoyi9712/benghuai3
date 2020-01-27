@@ -1,0 +1,99 @@
+<!doctype html> <!--着重强调声明:我这是一个html5 的页面,-->
+<html> <!-- 页面的所有内容 涵盖整体 -->
+	<head>
+		<meta charset="utf-8"><!--meta 原标签 支持中文的万国码-->
+		<meta name="keywords" content="小白 模板"><!--关键词-->
+		<meta name="description" content="小白 不晓得">
+		<title>小白的模板</title><!--页面的标题-->
+		<style>
+			body,p,h1,h2,h3,h4,h5,h6,ul{
+				margin:0;
+			}
+			ul{
+				padding-left:0;
+				list-style-type:none;
+			}
+			a{
+				text-decoration:none;
+				color: #222;
+			}
+			input{
+				padding:0;
+				outline:none;/*和border一样的写法*/
+				border:none;
+			}
+			body{
+				background-color:#CCC;
+			}
+			.clearfix:after{
+				content:".";
+				font-size:0;
+				height:0;
+				display:block;
+				clear:both;
+				overflow:hidden;
+			}
+			/* 样式初始化 */
+			.list{
+				width:1120px;
+				height:500px;
+				background-color:#6600ff;
+				margin:200px auto;
+			}
+			.list>li{
+				position:relative;
+				width:250px;
+				height:250px;
+				margin:125px 15px;
+				float:left;
+				cursor:pointer;
+			}
+			.list>li:nth-child(1){
+				background:url("./1.png")center/cover;
+			}
+			.list>li:nth-child(2){
+				background:url("./2.png")center/cover;
+			}
+			.list>li:nth-child(3){
+				background:url("./3.png")center/cover;
+			}
+			.list>li:nth-child(4){
+				background:url("./4.png")center/cover;
+			}
+			.list>li:before,.list>li:after{
+				content:"";
+				display:block;
+				height:0;
+				width:0;
+				position:absolute;
+				opacity:0;
+				transition:.5s;
+			}
+			.list>li:before{
+				bottom:30px;
+				left:30px;
+				border-left:10px solid #6600ff;
+				border-bottom:10px solid #6600ff;
+			}
+			.list>li:after{
+				top:30px;
+				right:30px;
+				border-top:10px solid #6600ff;
+				border-right:10px solid #6600ff;
+			}
+			.list>li:hover:before,.list>li:hover:after{
+				opacity:1;
+				width:210px;
+				height:210px;
+			}
+		</style>
+	</head><!--储存页面的基础信息内容(标题,编码格式)-->
+	<body><!--灵魂-- 页面的具体表现内容-->
+		<ul class="list clearfix">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html> <!-- 结束标签-->

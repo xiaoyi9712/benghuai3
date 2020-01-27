@@ -1,0 +1,103 @@
+<!doctype html> <!--着重强调声明:我这是一个html5 的页面,-->
+<html> <!-- 页面的所有内容 涵盖整体 -->
+	<head>
+		<meta charset="utf-8"><!--meta 原标签 支持中文的万国码-->
+		<meta name="keywords" content="小白 模板"><!--关键词-->
+		<meta name="description" content="小白 不晓得">
+		<title>小白的模板</title><!--页面的标题-->
+		<style>
+			body,p,h1,h2,h3,h4,h5,h6,ul{
+				margin:0;
+			}
+			ul{
+				padding-left:0;
+				list-style-type:none;
+			}
+			a{
+				text-decoration:none;
+				color: #222;
+			}
+			input{
+				margin:0;
+				padding:0;
+				outline:none;/*和border一样的写法*/
+				border:none;
+			}
+			/* 样式初始化 */
+			.box{
+				height:420px;
+				width:1099px;
+				margin:200px auto;
+			}
+			.clearfix:after{
+				content:".";
+				font-size:0;
+				height:0;
+				clear:both;
+				display:block;
+				overflow:hidden;
+			}
+			.box .list>li{
+				/* width:142px; */
+				height:420px;
+				float:left;
+			}
+			.box .list>li:nth-child(1),.box .list>li:nth-child(1)>div{
+				background:url(./1.jpg)no-repeat center/cover;
+			}
+			.box .list>li:nth-child(2),.box .list>li:nth-child(2)>div{
+				background:url(./2.jpg)no-repeat center/cover;
+			}
+			.box .list>li:nth-child(3),.box .list>li:nth-child(3)>div{
+				background:url(./3.jpg)no-repeat center/cover;
+			}
+			.box .list>li:nth-child(4),.box .list>li:nth-child(4)>div{
+				background:url(./4.jpg)no-repeat center/cover;
+			}
+			.box .list>li input[name="ok"]{
+				width:142px;
+				height:420px;
+				opacity:0;
+				transition:0.5s;
+				cursor:pointer;
+			}
+			.box .list>li input[name="ok"]:checked{
+				width:673px;
+			}
+			.box .list>li input[name="ok"]:checked~div{
+				opacity:1;
+			}
+			.box .list>li:nth-child(1)>div,.box .list>li:nth-child(2)>div,.box .list>li:nth-child(3)>div,.box .list>li:nth-child(4)>div{
+				width:100%;
+				height:100%;
+				position:absolute;
+				top:0;
+				left:0;
+				z-index:-1;
+				opacity:0;
+			}
+		</style>
+	</head><!--储存页面的基础信息内容(标题,编码格式)-->
+	<body><!--灵魂-- 页面的具体表现内容-->
+		<div class="box">
+			<ul class="list clearfix">
+				<li>
+					<input type="radio"value="" name="ok" checked>
+					<div></div>
+				</li>
+				<li>
+					<input type="radio"value="" name="ok">
+					<div></div>
+				</li>
+				<li>
+					<input type="radio"value="" name="ok">
+					<div></div>
+				</li>
+				<li>
+					<input type="radio"value="" name="ok">
+					<div></div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html> <!-- 结束标签-->
